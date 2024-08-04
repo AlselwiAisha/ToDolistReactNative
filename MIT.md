@@ -1,4 +1,5 @@
 Copyright 2024, [Aisha Alselwi]
+
 Permission is hereby granted, free of charge, to any person obtaining a copy of this [To-Do list] and associated documentation files, to deal in the [To-Do list]
 without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,
 sublicense, and/or sell copies of the [To-Do list], and to permit persons to whom the [To-Do list] is furnished to do so, subject to the following conditions:
