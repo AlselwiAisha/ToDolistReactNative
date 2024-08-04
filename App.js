@@ -1,5 +1,5 @@
 import React, {useState}from 'react';
-import { StyleSheet, TouchableOpacity, FlatList, View ,Text} from 'react-native';
+import { StyleSheet, TouchableOpacity, FlatList, View ,Text,Alert} from 'react-native';
 import Header from './components/header';
 import AddTodo from './components/addTodo';
 
@@ -16,6 +16,7 @@ const pressHandler = (key) => {
 }
 
 const submitHandler = (text) => {
+  if(text.length > 3){
   setTodos((prevTodos) => {
     return [
       {text: text, key: Math.random().toString()},
@@ -23,6 +24,11 @@ const submitHandler = (text) => {
     ];
   });
 }
+else{
+  Alert.alert('OOPS!', 'Todos must be over 3 chars long', [
+    {text: 'Ok', onPress: () => console.log('alert closed')}
+  ]);
+}}
 
   return (
     <View style={styles.container}>
