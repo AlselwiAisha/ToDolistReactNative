@@ -1,5 +1,5 @@
 import React, {useState}from 'react';
-import { StyleSheet, TouchableOpacity, FlatList, View ,Text,Alert} from 'react-native';
+import { StyleSheet, TouchableOpacity, FlatList, View ,Text,Alert, TouchableWithoutFeedback,Keyboard} from 'react-native';
 import Header from './components/header';
 import AddTodo from './components/addTodo';
 
@@ -31,6 +31,9 @@ else{
 }}
 
   return (
+    <TouchableWithoutFeedback onPress={() => {
+      Keyboard.dismiss();
+    }}>
     <View style={styles.container}>
       <Header />
       <View style={styles.content}>
@@ -47,6 +50,7 @@ else{
         </View>
       </View>
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 
