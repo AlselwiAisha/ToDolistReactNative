@@ -56,10 +56,12 @@ else{
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
   },
   text: {
+    flex: 1,
     padding: 20,
     marginTop: 16,
     borderColor: "#bbb",
@@ -69,10 +71,12 @@ const styles = StyleSheet.create({
     color: "coral",
   },
   content: {
+    flex: 1,
     padding: 40,
     width: "100%",
   },
   list: {
+    flex: 1,
     marginTop: 20,
   }
 });
