@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
         width: "100%",
     },
     title: {
-        // paddingTop: 30,
         textAlign: "center",
         color: "#fff",
         fontSize: 20,

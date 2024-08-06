@@ -2,6 +2,7 @@ import React, {useState}from 'react';
 import { StyleSheet, TouchableOpacity, FlatList, View ,Text,Alert, TouchableWithoutFeedback,Keyboard} from 'react-native';
 import Header from './components/header';
 import AddTodo from './components/addTodo';
+import TodosItem from './components/todosItem';
 
 export default function App() {
 const [todos, setTodos] = useState([
@@ -42,9 +43,7 @@ else{
           <FlatList 
           data={todos}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => pressHandler(item.key)}>
-              <Text style={styles.text}>{item.text}</Text>
-            </TouchableOpacity>
+           <TodosItem item={item} pressHandler={pressHandler} />
           )}
           />
         </View>
@@ -68,7 +67,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderStyle: "dashed",
     borderRadius: 10,
-    color: "coral",
   },
   content: {
     flex: 1,
